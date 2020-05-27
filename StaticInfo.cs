@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AssettoCorsaSharedMemory
 {
@@ -26,7 +22,6 @@ namespace AssettoCorsaSharedMemory
         [MarshalAs (UnmanagedType.ByValTStr, SizeConst = 15)]
         public String ACVersion;
 
-        // session static info
         public int NumberOfSessions;
         public int NumCars;
         [MarshalAs (UnmanagedType.ByValTStr, SizeConst = 33)]
@@ -42,20 +37,21 @@ namespace AssettoCorsaSharedMemory
 
         public int SectorCount;
 
-        // car static info
-        public float MaxTorque;
-        public float MaxPower;
+        public float MaxTorque; //Not used in ACC
+        public float MaxPower; //Not used in ACC
+
         public int MaxRpm;
         public float MaxFuel;
-        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
-        public float[] SuspensionMaxTravel;
-        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
-        public float[] TyreRadius;
 
-        // since 1.5
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] SuspensionMaxTravel; //Not used in ACC
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] TyreRadius; //Not used in ACC
+
         public float MaxTurboBoost;
-        public float Deprecated1; // AirTemp since 1.6 in physic
-        public float Deprecated2; // RoadTemp since 1.6 in physic
+        public float Deprecated1; //Not used in ACC
+        public float Deprecated2; //Not used in ACC
+        
         public int PenaltiesEnabled;
         public float AidFuelRate;
         public float AidTireRate;
@@ -64,30 +60,25 @@ namespace AssettoCorsaSharedMemory
         public float AidStability;
         public int AidAutoClutch;
         public int AidAutoBlip;
-
-        // since 1.7.1
-        public int HasDRS;
-        public int HasERS;
-        public int HasKERS;
-        public float KersMaxJoules;
-        public int EngineBrakeSettingsCount;
-        public int ErsPowerControllerCount;
-
-        // since 1.7.2
-        public float TrackSPlineLength;
+        
+        public int HasDRS; //Not used in ACC
+        public int HasERS; //Not used in ACC
+        public int HasKERS; //Not used in ACC
+        public float KersMaxJoules; //Not used in ACC
+        public int EngineBrakeSettingsCount; //Not used in ACC
+        public int ErsPowerControllerCount; //Not used in ACC
+        public float TrackSPlineLength; //Not used in ACC
         [MarshalAs (UnmanagedType.ByValTStr, SizeConst = 15)]
-        public string TrackConfiguration;
-
-        // since 1.10.2
-        public float ErsMaxJ;
-
-        // since 1.13
-        public int IsTimedRace;
-        public int HasExtraLap;
+        public string TrackConfiguration; //Not used in ACC
+        public float ErsMaxJ; //Not used in ACC
+        public int IsTimedRace; //Not used in ACC
+        public int HasExtraLap; //Not used in ACC
         [MarshalAs (UnmanagedType.ByValTStr, SizeConst = 33)]
-        public String CarSkin;
-        public int ReversedGridPositions;
+        public String CarSkin; //Not used in ACC
+        public int ReversedGridPositions; //Not used in ACC
+
         public int PitWindowStart;
         public int PitWindowEnd;
+        public int IsOnline;
     }
 }

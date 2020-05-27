@@ -1,3 +1,5 @@
+This package is based on https://github.com/mdjarv/assettocorsasharedmemory. I've only made it work with ACC
+
 Assetto Corsa Shared Memory Library
 ===================================
 

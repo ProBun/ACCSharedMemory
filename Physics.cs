@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AssettoCorsaSharedMemory
 {
@@ -51,64 +47,65 @@ namespace AssettoCorsaSharedMemory
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
         public float[] WheelAngularSpeed;
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
-        public float[] TyreWear;
+        public float[] TyreWear; //Nout used in ACC
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
-        public float[] TyreDirtyLevel;
+        public float[] TyreDirtyLevel; //Not used in ACC
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
         public float[] TyreCoreTemperature;
-        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
-        public float[] CamberRad;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] CamberRAD; //Not used in ACC
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
         public float[] SuspensionTravel;
 
-        public float Drs;
+        public float DRS; //Not used in ACC
         public float TC;
         public float Heading;
         public float Pitch;
         public float Roll;
-        public float CgHeight;
+        public float CGHeight; //Not used in ACC
 
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 5)]
         public float[] CarDamage;
 
-        public int NumberOfTyresOut;
+        public int NumberOfTyresOut; //Not used in ACC
+
         public int PitLimiterOn;
         public float Abs;
 
-        public float KersCharge;
-        public float KersInput;
+        public float KersCharge; //Not used in ACC
+        public float KersInput; //Not used in ACC
+        
         public int AutoShifterOn;
-        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 2)]
-        public float[] RideHeight;
 
-        // since 1.5
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
+        public float[] RideHeight; //Not used in ACC
+        
         public float TurboBoost;
-        public float Ballast;
-        public float AirDensity;
 
-        // since 1.6
+        public float Ballast; //Not used in ACC
+        public float AirDensity; //Not used in ACC
+
         public float AirTemp;
         public float RoadTemp;
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 3)]
         public float[] LocalAngularVelocity;
         public float FinalFF;
 
-        // since 1.7
-        public float PerformanceMeter;
-        public int EngineBrake;
-        public int ErsRecoveryLevel;
-        public int ErsPowerLevel;
-        public int ErsHeatCharging;
-        public int ErsisCharging;
-        public float KersCurrentKJ;
-        public int DrsAvailable;
-        public int DrsEnabled;
+        public float PerformanceMeter; //Not used in ACC
+        public float EngineBrake; //Not used in ACC
+        public float ErsRecoveryLevel; //Not used in ACC
+        public float ErsPowerLeve; //Not used in ACC
+        public float ErsHeatCharging; //Not used in ACC
+        public float ErsIsCharging; //Not used in ACC
+        public float KersCurrentKJ; //Not used in ACC
+        public float DrsAvailable; //Not used in ACC
+        public float DrsEnabled; //Not used in ACC
+
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
         public float[] BrakeTemp;
 
-        // since 1.10
         public float Clutch;
-
+        
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
         public float[] TyreTempI;
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
@@ -116,10 +113,8 @@ namespace AssettoCorsaSharedMemory
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
         public float[] TyreTempO;
 
-        // since 1.10.2
         public int IsAIControlled;
 
-        // since 1.11
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
         public Coordinates[] TyreContactPoint;
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
@@ -128,8 +123,43 @@ namespace AssettoCorsaSharedMemory
         public Coordinates[] TyreContactHeading;
         public float BrakeBias;
 
-        // since 1.12
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 3)]
         public float[] LocalVelocity;
+
+        public int P2PActivation; //Not used in ACC
+        public int P2PStatus; //Not used in ACC
+        public float CurrentMaxRPM; //Not used in ACC
+        
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] MZ; //Not used in ACC
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] FZ; //Not used in ACC
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] FY; //Not used in ACC
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] SlipRatio; //Not used in ACC
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] SlipAngle; //Not used in ACC
+
+        public int TCInAction; //Not used in ACC
+        public int ABSInAction; //Not used in ACC
+
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] SuspensionDamage; //Not used in ACC
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] TyreTemp; //Not used in ACC
+        
+        public float WaterTemp;
+
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] brakePressure;
+
+        public int frontBrakeCompound;
+        public int rearBrakeCompound;
+        
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] padLife;
+        [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
+        public float[] discLife;
     }
 }
