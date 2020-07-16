@@ -161,5 +161,13 @@ namespace AssettoCorsaSharedMemory
         public float[] padLife;
         [MarshalAs (UnmanagedType.ByValArray, SizeConst = 4)]
         public float[] discLife;
+
+        public int ignitionOn;
+        public int starterEngineOn;
+        public int isEngineRunning;
+        public float kerbVibration;
+        public float slipVibration;
+        public float gVibration;
+        public float absbVibration;
     }
 }

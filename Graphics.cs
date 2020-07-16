@@ -170,5 +170,8 @@ namespace AssettoCorsaSharedMemory
         public String TrackStatus;
         public int MissingMandatoryPits;
         public float Clock; //Time of the day in seconds
+
+        public int directionLightsLeft;
+        public int directionLightsRight;
     }
 }
